@@ -3,7 +3,6 @@
 ##############################################################################
 
 import streamlit as st
-import numpy as np
 
 from grblc.lightcurve import Lightcurve
 from grblc.photometry.constants import grbinfo
