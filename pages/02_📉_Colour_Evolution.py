@@ -39,7 +39,8 @@ lc = Lightcurve(
                 path = st.session_state['data_type'],
                 data_space = 'lin',
                 appx_bands = True,
-                remove_outliers = st.session_state['remove_outliers']
+                remove_outliers = st.session_state['remove_outliers'],
+                save= False
                 )
 
 filters = [*set(lc.band)] # TO DO: order by band count. display band count
@@ -53,7 +54,7 @@ colorevoltab = st.empty()
 
 fig_avar, fig_a0, filterforrescaling, \
     nocolorevolutionlist, colorevolutionlist, nocolorevolutionlista0, colorevolutionlista0, \
-        light, resc_slopes_df, rescale_df = lc.colorevolGRB()
+        light, resc_slopes_df, rescale_df = lc.colorevolGRB(save=False)
 
 colorevolplot.pyplot(fig_avar)
 
@@ -64,7 +65,7 @@ st.markdown("## Rescaling")
 rescaleplot = st.empty()
 
 try:
-    figunresc, figresc, resc_mag_df = lc.rescaleGRB()
+    figunresc, figresc, resc_mag_df = lc.rescaleGRB(save=False)
 
     rescaleplot.pyplot(figresc)
 

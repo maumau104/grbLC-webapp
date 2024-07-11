@@ -75,7 +75,8 @@ if format:
 lc = Lightcurve(
                 grb = st.session_state['select_event'],
                 path = st.session_state['data_type'],
-                data_space = 'lin'
+                data_space = 'lin',
+                save = False
                 )
                 
 plot.plotly_chart(lc.displayGRB())
