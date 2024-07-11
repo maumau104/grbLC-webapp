@@ -1,4 +1,4 @@
 astropy >= 5.2.2
 grblc >= 0.2.0
 streamlit >= 1.35.0
-grblc @ git+https://github.com/SLAC-Gamma-Rays/grbLC
+grblc @ git+https://github.com/SLAC-Gamma-Rays/grbLC@color-evolution
