@@ -26,14 +26,17 @@ if 'select_event' not in st.session_state:
 if 'data_type' not in st.session_state:
     st.session_state['data_type'] = 'converted'
 
-if 'appx' not in st.session_state:
-    st.session_state['appx_bands'] = False
+# if 'appx' not in st.session_state:
+#     st.session_state['appx_bands'] = False
 
-if 'outliers' not in st.session_state:
-    st.session_state['remove_outliers'] = False
+# if 'outliers' not in st.session_state:
+#     st.session_state['remove_outliers'] = False
 
-if 'select_band' not in st.session_state:
-    st.session_state['select_band'] = 'resc_band'
+# if 'best' not in st.session_state:
+#     st.session_state['best'] = False
+
+# if 'start' not in st.session_state:
+#     st.session_state['start'] = False
 
 
 # App contents
@@ -87,13 +90,29 @@ plot.plotly_chart(lc.displayGRB())
 c1, c2 = st.columns(2)
 
 beta = c1.button(label=r"Calculate $\beta_{opt}$")
+beta_opt = None
+best = None
+start = None
 
 if beta:
-    st.markdown("## Spectral Analysis")
 
+    st.warning("This action may take a while. Click start to confirm.")# You can also get the best-fit parameter instead.")
+
+#     c3, c4 = st.columns(2)
+#     st.session_state['best'] = c3.button("Get best-fit")
+#     st.session_state['start'] = c4.button("Start")
+
+
+# if st.session_state['best']:
+#     st.write(f"The best-fit value from our analysis in Dainotti et al (2024) is {beta_opt}")
+
+#     st.session_state['best'] = False
+
+# if st.session_state['start']:
+    st.markdown("## Spectral Analysis")
     st.write("Fitting SMC, LMC and MW model based on Pei (1992). The best model is selected based on probability. Refer Dainotti et al. 2024 for more details")
 
-    with st.spinner("This may take a while (upto 15 minutes for big files). Please do not exit the page."):
+    with st.spinner("This may take a while. Please do not exit the page."):
         dfexp = lc.betaGRB()
 
     st.write("### Our calculation:")
@@ -101,6 +120,8 @@ if beta:
         st.error(r"No viable $\beta_{opt}$ calculated. Refer Dainotti et al. 2024 for more details.")
     else:
         st.table(dfexp)
+
+    # st.session_state['start'] = False
 
 
 ## Download

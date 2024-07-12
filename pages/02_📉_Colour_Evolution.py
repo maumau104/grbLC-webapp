@@ -4,7 +4,7 @@ from grblc.lightcurve import Lightcurve
 from grblc.photometry.constants import grbinfo
 
 
-st.markdown("### Colour Evolution")
+st.markdown("## Colour Evolution")
 
 
 # Initialise session state keys
@@ -58,7 +58,7 @@ fig_avar, fig_a0, filterforrescaling, \
 
 colorevolplot.pyplot(fig_avar)
 
-colorevoltab.table(resc_slopes_df)
+colorevoltab.dataframe(resc_slopes_df)
 
 st.markdown("## Rescaling")
 
@@ -67,7 +67,7 @@ rescaleplot = st.empty()
 try:
     figunresc, figresc, resc_mag_df = lc.rescaleGRB(save=False)
 
-    rescaleplot.pyplot(figresc)
+    rescaleplot.plotly_chart(figresc)
 
 except ValueError:
     st.error("No filters to rescale.")
