@@ -43,8 +43,9 @@ lc = Lightcurve(
                 save= False
                 )
 
-filters = [*set(lc.band)] # TO DO: order by band count. display band count
-st.session_state['select_band'] = pos1.selectbox("Choose the band, by default the most numerous", filters)
+import pandas as pd
+filters = pd.DataFrame(lc.band).value_counts().index.to_flat_index() # TO DO: order by band count. display band count
+st.session_state['select_band'] = str(pos1.selectbox("Choose the band, by default the most numerous", filters)).strip()
 
 st.markdown("")
 colorevolplot = st.empty()
@@ -58,7 +59,7 @@ fig_avar, fig_a0, filterforrescaling, \
 
 colorevolplot.pyplot(fig_avar)
 
-colorevoltab.dataframe(resc_slopes_df)
+colorevoltab.dataframe(resc_slopes_df) # serialisation issue
 
 st.markdown("## Rescaling")
 
