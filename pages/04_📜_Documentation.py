@@ -1,6 +1,5 @@
-import streamlit as st
-
 ![Logo](logo.png)  
+import streamlit as st
 
 st.markdown("# About")
 
