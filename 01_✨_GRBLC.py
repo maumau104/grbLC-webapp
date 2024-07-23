@@ -17,6 +17,12 @@ st.set_page_config(page_title=apptitle, layout='wide')
 
 st.title("Gamma Ray Bursts Optical Afterglow Repository", anchor="main")
 
+st.markdown("""
+    We present the indivudual optical/IR photometry of each one of the 535 GRBs gathered in [Dainotti et al.(2024)](https://doi.org/10.1093/mnras/stae1484)
+    as well the spectral information of each observation.
+    """
+)
+
 
 # Initialise session state keys
 
@@ -104,13 +110,13 @@ if beta:
 
 
 # if st.session_state['best']:
-#     st.write(f"The best-fit value from our analysis in Dainotti et al (2024) is {beta_opt}")
+#     st.write(f"The best-fit value from our analysis in [Dainotti et al.(2024)](https://doi.org/10.1093/mnras/stae1484) is {beta_opt}")
 
 #     st.session_state['best'] = False
 
 # if st.session_state['start']:
     st.markdown("## Spectral Analysis")
-    st.write("Fitting SMC, LMC and MW model based on Pei (1992). The best model is selected based on probability. Refer Dainotti et al. 2024 for more details")
+    st.write("Fitting SMC, LMC and MW model based on Pei (1992). The best model is selected based on probability. Please see [Dainotti et al.(2024)](https://doi.org/10.1093/mnras/stae1484) for more details")
 
     with st.spinner("This may take a while. Please do not exit the page."):
         dfexp = lc.betaGRB()
