@@ -1,20 +1,5 @@
 import streamlit as st
-from PIL import Image
 
-
-def add_logo(logo_path, width, height):
-    """Read and return a resized logo"""
-    logo = Image.open(logo_path)
-    modified_logo = logo.resize((width, height))
-    return modified_logo
-
-my_logo = add_logo(logo_path="logo.png", width=50, height=60)
-st.sidebar.image(my_logo)
-
-# OR
-
-#st.sidebar.image(add_logo(logo_path="your/logo/path", width=50, height=60)) 
-    
 st.markdown("# About")
 
 ## Information
