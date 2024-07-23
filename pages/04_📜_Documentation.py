@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.image('logo.png')
+st.image('logo.png',caption='Sunrise by the mountains')
 st.markdown("# About")
 
 ## Information
