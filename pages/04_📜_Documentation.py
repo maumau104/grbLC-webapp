@@ -1,6 +1,6 @@
 import streamlit as st
 
-![Logo](docs/Images/logo.jpeg)  
+![Logo](logo.jpeg)  
 
 st.markdown("# About")
 
