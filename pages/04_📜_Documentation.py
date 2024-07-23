@@ -1,6 +1,6 @@
 import streamlit as st
 
-![Logo](logo.jpeg)  
+![Logo](grblLC-webapp/pages/logo.jpeg)  
 
 st.markdown("# About")
 
