@@ -116,7 +116,7 @@ if beta:
 
 # if st.session_state['start']:
     st.markdown("## Spectral Analysis")
-    st.write("Fitting SMC, LMC and MW model based on Pei (1992). The best model is selected based on probability. Please see [Dainotti et al.(2024)](https://doi.org/10.1093/mnras/stae1484) for more details")
+    st.write("Fitting SMC, LMC and MW model based on Pei (1992). The best model is selected based on probability. Please see [Dainotti et al.(2024)](https://doi.org/10.1093/mnras/stae1484) for additional details.")
 
     with st.spinner("This may take a while. Please do not exit the page."):
         dfexp = lc.betaGRB()
