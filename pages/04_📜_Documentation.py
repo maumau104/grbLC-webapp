@@ -1,5 +1,6 @@
 import streamlit as st
 
+![LOGO](Logo.png "Logo")
 st.markdown("# About")
 
 ## Information
