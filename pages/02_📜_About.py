@@ -41,7 +41,7 @@ st.markdown("""
 st.markdown("""
     ### Usage Policy
     The data gathered in this catalogue was obtained by public sources and private communications. 
-    The **GRBLC^^ package and web-based repository are designed to be open-access and available to all members of the community.
+    The **GRBLC** package and web-based repository are designed to be open-access and available to all members of the community.
     All are welcome to use our software, though we ask that if the provided data or software is used in any publication,
     the authors cite this paper as well as include the following statement in the acknowledgments: 
         
@@ -55,7 +55,7 @@ st.markdown("""
 
 st.markdown("""
     ### Data availability  
-    The data is available along with the Python package at the GitHub link below.
+    The data is available along with the **Python** package at the **GitHub** link below.
     """
 )
 
