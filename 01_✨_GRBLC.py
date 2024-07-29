@@ -23,7 +23,6 @@ custom_css = """
 <style>
 img[data-testid="stLogo"] {
     height: 15rem;
-"<style>h2 {text-align: center;}</style>"
 }
 </style>
 """
