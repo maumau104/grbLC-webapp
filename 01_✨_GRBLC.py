@@ -22,7 +22,7 @@ st.title("Gamma Ray Bursts Optical Afterglow Repository", anchor="main")
 custom_css = """
 <style>
 img[data-testid="stLogo"] {
-    height: 15rem;
+    height: 15rem;text-align: center;
 }
 </style>
 """
