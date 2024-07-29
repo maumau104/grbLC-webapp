@@ -13,7 +13,7 @@ img[data-testid="stLogo"] {
 """
 st.markdown(custom_css, unsafe_allow_html=True)
 
-st.logo('logo.png', icon_image='logo.png')
+st.logo('logo_transparent.png', icon_image='logo_transparent.png')
 
 ## Information
 ##############################################################################
