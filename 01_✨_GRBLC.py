@@ -13,7 +13,7 @@ from grblc.photometry.constants import grbinfo
 
 apptitle = "GRBLC"
 
-st.set_page_config(page_title=apptitle, layout='wide',"<h1 style='text-align: center")
+st.set_page_config(page_title=apptitle, layout='wide')
 
 st.title("Gamma Ray Bursts Optical Afterglow Repository", anchor="main")
 
@@ -23,6 +23,7 @@ custom_css = """
 <style>
 img[data-testid="stLogo"] {
     height: 15rem;
+"<style>h2 {text-align: center;}</style>"
 }
 </style>
 """
