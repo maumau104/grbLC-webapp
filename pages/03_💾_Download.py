@@ -17,6 +17,19 @@ from grblc.data.load import get_grb
 # Download page
 st.markdown("# Download")
 
+# Logo
+
+custom_css = """
+<style>
+img[data-testid="stLogo"] {
+    height: 15rem;
+}
+</style>
+"""
+st.markdown(custom_css, unsafe_allow_html=True)
+
+st.logo('logo.png', icon_image='logo.png')
+
 ## Cleaning download directory on each new session
 if 'file_zip' not in st.session_state: 
     if os.path.exists('download_folder/') == True:

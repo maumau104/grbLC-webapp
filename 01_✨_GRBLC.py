@@ -17,6 +17,19 @@ st.set_page_config(page_title=apptitle, layout='wide')
 
 st.title("Gamma Ray Bursts Optical Afterglow Repository", anchor="main")
 
+# Logo
+
+custom_css = """
+<style>
+img[data-testid="stLogo"] {
+    height: 15rem;
+}
+</style>
+"""
+st.markdown(custom_css, unsafe_allow_html=True)
+
+st.logo('logo.png', icon_image='logo.png')
+
 st.markdown("""
     We present the indivudual optical/IR photometry of each one of the 535 GRBs gathered in [Dainotti et al. 2024](https://doi.org/10.1093/mnras/stae1484)
     as well the spectral information of each observation.
@@ -65,11 +78,11 @@ st.markdown(
 )
 
 
-with st.container():
-    st.sidebar.metric("## Right ascension", grbinfo.loc[grbinfo.index == st.session_state['select_event'], "ra"].to_numpy()[0])
-    st.sidebar.metric("## Declination", grbinfo.loc[grbinfo.index == st.session_state['select_event'], "dec"].to_numpy()[0])
-    st.sidebar.metric("## Redshift", grbinfo.loc[grbinfo.index == st.session_state['select_event'], "z"].to_numpy()[0])
-    st.sidebar.metric("## Optical spectral index", str(grbinfo.loc[grbinfo.index == st.session_state['select_event'], "beta"].to_numpy()[0]) +
+with st.sidebar.expander("Click to expand", expanded=False):
+    st.metric("## Right ascension", grbinfo.loc[grbinfo.index == st.session_state['select_event'], "ra"].to_numpy()[0])
+    st.metric("## Declination", grbinfo.loc[grbinfo.index == st.session_state['select_event'], "dec"].to_numpy()[0])
+    st.metric("## Redshift", grbinfo.loc[grbinfo.index == st.session_state['select_event'], "z"].to_numpy()[0])
+    st.metric("## Optical spectral index", str(grbinfo.loc[grbinfo.index == st.session_state['select_event'], "beta"].to_numpy()[0]) +
                        "+/-" + str(grbinfo.loc[grbinfo.index == st.session_state['select_event'], "beta_err"].to_numpy()[0]))
 
 
