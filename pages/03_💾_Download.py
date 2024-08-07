@@ -28,7 +28,7 @@ img[data-testid="stLogo"] {
 """
 st.markdown(custom_css, unsafe_allow_html=True)
 
-st.logo('logo_transparent.png', icon_image='logo_transparent.png')
+st.logo('logo.png', icon_image='logo.png')
 
 ## Cleaning download directory on each new session
 if 'file_zip' not in st.session_state: 

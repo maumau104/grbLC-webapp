@@ -28,7 +28,7 @@ img[data-testid="stLogo"] {
 """
 st.markdown(custom_css, unsafe_allow_html=True)
 
-st.logo('logo_transparent.png', icon_image='logo_transparent.png')
+st.logo('logo.png', icon_image='logo.png')
 
 st.markdown("""
     We present the indivudual optical/IR photometry of each one of the 535 GRBs gathered in [Dainotti et al. 2024](https://doi.org/10.1093/mnras/stae1484)
