@@ -56,9 +56,9 @@ st.markdown("""
     **The data gathered in this catalogue was obtained by public sources and private communications. 
     The GRBLC package and web-based repository are designed to be open-access and available to all members of the community.
     All are welcome to use our software, though we ask that if the provided data or software is used in any publication,
-    the authors cite this paper as well as include the following statement in the acknowledgments: 
+    the authors cite this paper as well as include the following statement in the acknowledgments:** 
         
-    "Data used in our work is taken from the catalogue ([Dainotti et al. 2024](https://doi.org/10.1093/mnras/stae1484)), and the original data sources are cited within."**            
+    **"Data used in our work is taken from the catalogue ([Dainotti et al. 2024](https://doi.org/10.1093/mnras/stae1484)), and the original data sources are cited within."**            
     """
 )
 
